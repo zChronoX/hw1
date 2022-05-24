@@ -1,0 +1,339 @@
+.gb {
+    margin-bottom: 0px;
+
+}
+
+body {
+    background: white;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+
+}
+
+#scroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+input {
+    margin-left: 0, 5em;
+
+}
+
+.login_box {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.register {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 15px 0;
+    background: pink;
+    border: 3px solid lightpink;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.register_title {
+    color: black(255, 192, 227);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+
+.register_logo {
+    padding-bottom: 10px;
+}
+
+.register_logo img {
+    margin: 10px;
+    object-fit: cover;
+    width: 40%;
+
+}
+
+.type_zero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.type_zero input {
+    border: 1px solid silver;
+    outline-color: Silver;
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+}
+
+#email,
+#Nome,
+#Cognome,
+#Username,
+#Password,
+#cPassword {
+    width: 100%;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 30px rgba(126, 126, 126, 0.4);
+    outline: none;
+}
+
+
+.verifyPassword {
+    width: 83%;
+}
+
+.textBox:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.user_box2,
+.user_box {
+    width: 83%
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper #p {
+    position: relative;
+    cursor: pointer;
+    bottom: 50px;
+    left: 80px;
+}
+
+
+.fa {
+    font-size: 30px;
+    color: #7a7a7a;
+    font-weight: normal;
+    position: absolute;
+    left: 60px;
+}
+
+.fa-eye:before {
+    position: absolute;
+    left: 55px;
+
+}
+
+
+.verifyPassword {
+    width: 83%;
+}
+
+.type_zero .user_mail {
+    width: 83%;
+    display: block;
+}
+
+.type_zero h3 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.user_mail input[type="text"],
+.username input[type="text"],
+input[type="password"] {
+    width: 100%;
+}
+
+#form {
+    position: relative;
+}
+
+#form .user_mail,
+#form .username {
+    position: relative;
+}
+
+#form #email {
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-style: 18px;
+}
+
+#textEmail,
+#textUsername,
+#textUser,
+#textSurname,
+#textPassword,
+#textPassC {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    padding: 5px;
+    font-style: italic;
+}
+
+.gender_box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.gender_box label:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.gender_box label {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.gender_box input[type="radio"] {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+#zero {
+    width: 57%;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: white;
+    color: pink;
+    cursor: pointer;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -6px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -6px;
+    position: relative;
+    background-color: lightpink;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+
+
+
+input[type="submit"]:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.995);
+}
+
+.signup a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.signup p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.signup a:hover {
+    color: rgba(126, 126, 126, 0.8);
+}
+
+.errore {
+    color: Red;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(119, 0, 18);
+    font-size: 12px;
+}
+
+.okay {
+    color: Green;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: Lime;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.valid,
+.invalid {
+    margin-bottom: 10px;
+}

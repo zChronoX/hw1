@@ -1,0 +1,278 @@
+body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background: pink;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 986px;
+}
+
+
+nav .l_nav {
+    padding-right: 20px;
+    text-align: right;
+    padding: 10px 0;
+}
+
+nav .r_nav {
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 20px;
+}
+
+nav .r_nav a {
+    background: white;
+    font-weight: 700;
+    color: pink;
+    border-radius: 7px;
+    line-height: 50px;
+    padding: 9px 15px;
+}
+
+nav .l_nav a {
+    background: white;
+    font-weight: 700;
+    color: pink;
+    border-radius: 7px;
+    line-height: 50px;
+    padding: 9px 15px;
+
+}
+
+nav .r_nav a:hover,
+nav .l_nav a:hover {
+    color: black;
+    background-color: lightpink;
+}
+
+nav h1 {
+    padding: 0 20px;
+    line-height: 70px;
+    margin: 0;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.middle_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    padding-right: 16px;
+
+}
+
+.middle_logo img {
+    width: 70px;
+}
+
+.hidden {
+    display: none;
+}
+
+#infoView {
+    position: absolute;
+    top: 300;
+    height: 100vh;
+    z-index: 2;
+    color: white;
+    font-size: 1.4em;
+}
+
+#infoView div {
+    border-radius: 15px;
+    padding: 75px 100px 20px 100px;
+    background-color: pink;
+}
+
+#infoTitle {
+    margin-top: 0;
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+#infoView strong {
+    text-decoration: underline;
+}
+
+#closeInfo {
+    margin-top: 75px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+#closeInfo:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.type_zero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.type_zero input {
+    border: 1px solid white;
+    background: lightpink;
+    outline-color: Silver;
+    border-radius: 25px;
+    margin: 0 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.type_zero textarea {
+    border: 1px solid white;
+    background: lightpink;
+    outline-color: Silver;
+    border-radius: 25px;
+    margin: 0 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding-left: 10px;
+    height: 50px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    resize: none;
+
+}
+
+
+.type_zero input[type="text"] {
+    padding-left: 10px;
+    height: 50px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+
+.textBox:hover,
+.TitleBox:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: lightpink;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: lightpink;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+input[type="submit"]:active {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+
+::placeholder {
+    color: white;
+}
+
+.textBox {
+    height: 250px !important;
+    width: 300px;
+}
+
+.errore {
+    color: Red;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(119, 0, 18);
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.okay {
+    color: Green;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: Lime;
+    font-size: 12px;
+}
+
+.invalid {
+    margin-bottom: 15px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.textBox::placeholder {
+    text-align: center;
+}
+
+@media(max-width: 500px) {
+
+    header {
+        height: auto;
+    }
+
+    nav {
+        width: 90% !important;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+
+    #infoView {
+        top: 130px;
+        left: 20px;
+        border: 1px solid white;
+    }
+
+    #infoView div {
+        padding: 10px
+    }
+
+}

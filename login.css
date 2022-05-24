@@ -1,0 +1,380 @@
+body {
+    background: white;
+
+
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    margin-left: 0.5em;
+
+
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.box_login {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.login {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: pink;
+    border: 3px solid lightpink;
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+.login_copy {
+    color: pink;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+
+.login_logo {
+    margin: 10px;
+}
+
+.login_logo img {
+    margin: 10px;
+    object-fit: cover;
+    width: 20%;
+}
+
+.type_zero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 86%;
+}
+
+.type_zero input {
+    border: 1px solid white;
+    outline-color: Silver;
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+}
+
+.type_zero input[type="text"],
+input[type="password"] {
+    padding-left: 10px;
+    height: 50px;
+    font-size: 17px;
+}
+
+.textBox:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+input[type="submit"]:hover {
+    background: lightpink;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+input[type="submit"]:active {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+
+input#check {
+    margin: 0 0 0 10px;
+}
+
+input[type="checkbox"]:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 25px;
+    color: white;
+    display: none
+}
+
+input[type="checkbox"]:hover {
+    background-color: lightpink;
+}
+
+input[type="checkbox"]:checked {
+    background-color: pink;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.option {
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    position: relative;
+}
+
+.option:before {
+    position: absolute;
+    content: '';
+    width: 800%;
+    height: 5px;
+    background-color: white;
+    left: -900%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+}
+
+.option:after {
+    position: absolute;
+    content: '';
+    width: 800%;
+    height: 5px;
+    background-color: white;
+    right: -900%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+}
+
+.fblink {
+    padding-right: 20px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.fblink:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.fblink span {
+    font-size: 18px;
+    color: #021897;
+    margin-right: 5px;
+}
+
+.fblink a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #021897;
+}
+
+.glink {
+    padding-right: 20px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.glink:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.glink span {
+    font-size: 18px;
+    color: lightcoral;
+    margin-right: 5px;
+}
+
+.glink a {
+    text-decoration: none;
+    font-weight: bold;
+    color: lightcoral;
+}
+
+
+
+.forget-id {
+    margin: 15px;
+}
+
+.forget-id:hover {
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+.forget-id a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup {
+    border: 1px solid red;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 2px;
+    width: 100%;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.signup a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.forget-id a:hover,
+.signup a:hover {
+    color: whitesmoke;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+}
+
+
+.errore {
+    color: Red;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: LightPink;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+#password,
+#username {
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 30px rgba(126, 126, 126, 0.4);
+    outline: none;
+}
+
+.wrapper span {
+    position: relative;
+    cursor: pointer;
+    bottom: 50px;
+    left: 100px;
+}
+
+.fa {
+    font-size: 30px;
+    color: #7a7a7a;
+    font-weight: normal;
+    position: absolute;
+    left: 15px;
+}
+
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.valid,
+.invalid {
+    margin-bottom: 10px;
+}
+
+#textUsername,
+#textPassword {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    padding: 5px;
+    font-style: italic;
+}
+
+@media(max-width: 500px) {
+
+    .option:before,
+    .option:after {
+        height: 0;
+        width: 0;
+    }
+
+
+
+}
