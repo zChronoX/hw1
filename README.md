@@ -1,2 +1,4 @@
 # Homework 1
-hw1
+Homework 1
+Giovanni Maria Contarino
+Matricola: 1000007029
