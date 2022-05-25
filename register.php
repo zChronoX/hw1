@@ -74,6 +74,7 @@ if($num_error == 0)
   $cognome = mysqli_real_escape_string($conn, $_POST["Cognome"]);
   $gender = mysqli_real_escape_string($conn, $_POST["Genere"]);
   $password = mysqli_real_escape_string($conn, $_POST["Password"]); 
+  $password = password_hash($password, PASSWORD_BCRYPT);
 
 //Inserisco i valori nel db ed eseguo la query
 

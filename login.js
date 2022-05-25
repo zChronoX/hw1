@@ -23,13 +23,11 @@ const eye = document.getElementById('eye');
 eye.addEventListener('click', showPassword);
 
 function verifica(event) {
-  //ACCEDO AL VALORE INSERITO DALL'UTENTE nei vari input del nostro form
 
-  //VERIFICA CHE TUTTI I CAMPI DEVONO ESSERE INSERITI
   if (form_dati.username.value.length == 0 || form_dati.password.length == 0) {
-    //SE UNO DI QUESTI CAMPI NON E' STATO INSERITO:
 
-    //MANDIAMO UN ALERT PER AVVISARE L'UTENTE
+
+
     alert('Compilare tutti i campi!!');
     event.preventDefault();
   }

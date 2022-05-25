@@ -65,8 +65,9 @@ nav .l_nav a {
 
 nav .r_nav a:hover,
 nav .l_nav a:hover {
-    color: black;
-    background-color: lightpink;
+    background-color: lightcoral;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
 }
 
 nav h1 {
@@ -106,7 +107,7 @@ nav a {
 
 #infoView {
     position: absolute;
-    top: 300;
+    top: auto;
     height: 100vh;
     z-index: 2;
     color: white;
@@ -115,8 +116,9 @@ nav a {
 
 #infoView div {
     border-radius: 15px;
-    padding: 75px 100px 20px 100px;
-    background-color: pink;
+    padding: 30px;
+    background-color: lightcoral;
+    padding-top: 0px;
 }
 
 #infoTitle {
@@ -133,7 +135,6 @@ nav a {
 #closeInfo {
     margin-top: 75px;
     text-align: right;
-    text-decoration: underline;
 }
 
 #closeInfo:hover {
@@ -190,6 +191,7 @@ nav a {
 .TitleBox:hover {
     transform: scale(1.01);
     transition: 150ms ease-in-out;
+    background: lightcoral;
 }
 
 input[type="submit"] {
@@ -205,7 +207,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: lightpink;
+    background: lightcoral;
     transform: scale(1.01);
     transition: 150ms ease-in-out;
 }
@@ -252,6 +254,9 @@ input[type="submit"]:active {
 .textBox::placeholder {
     text-align: center;
 }
+.overflow {
+    overflow: hidden;
+}
 
 @media(max-width: 500px) {
 
@@ -266,13 +271,11 @@ input[type="submit"]:active {
     }
 
     #infoView {
-        top: 130px;
-        left: 20px;
-        border: 1px solid white;
+        
+        
+        left:20px;
+        right:20px;
     }
 
-    #infoView div {
-        padding: 10px
-    }
 
 }

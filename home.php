@@ -8,7 +8,7 @@ if (!$userid = checkAuth()) {
 
 <html>
 <?php
-// Carico le informazioni dell'utente loggato per visualizzarle nella sidebar (mobile)
+
 $conn = mysqli_connect($dbconfig['host'], $dbconfig['user'], $dbconfig['password'], $dbconfig['name']);
 $userid = mysqli_real_escape_string($conn, $userid);
 $query = "SELECT * FROM users WHERE id = $userid";
@@ -17,7 +17,7 @@ $userinfo = mysqli_fetch_assoc($res_1);
 ?>
 
 
-<html>
+
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

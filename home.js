@@ -203,12 +203,18 @@ function onJSONSearch(json) {
         elimina.dataset.postsid = post.posts_id;
         elimina.textContent = "🗑️";
         elimina.addEventListener("click", eliminaPost);
+        const like=document.createElement("a");
+        like.href= '#';
+        like.dataset.postsid= post.posts_id;
+        like.textContent = "Like";
+        like.addEventListener("click", LikePost);
         number.appendChild(user);
         number.appendChild(username);
         number.appendChild(time);
         number.appendChild(title);
         number.appendChild(text);
         number.appendChild(elimina);
+        number.appendChild(like);
         posts.appendChild(number);
 
     }
@@ -220,9 +226,14 @@ function SearchPosts(event) {
     event.preventDefault();
     const input = document.querySelector('#search_ps');
     const input_value = encodeURIComponent(input.value);
+    if( input_value == 0){
+        console.log('Non hai inserito niente')
+        document.querySelector('#a2').innerHTML='';
+    }
+    else{
     console.log('Eseguo la ricerca del post contente:' + input_value);
     fetch("search_posts.php?search_post=" + input_value).then(onResponse, onError).then(onJSONSearch);
-
+    }
 }
 
 

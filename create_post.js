@@ -10,13 +10,16 @@ closeInfo.addEventListener('click', closeInfoPage)
 
 function showInfo() {
     if (showInfoWindow.classList.contains('hidden')) {
-        showInfoWindow.classList.remove('hidden')
+        showInfoWindow.classList.remove('hidden');
+        document.body.classList.add('overflow');
     }
 }
 
 function closeInfoPage() {
     if (!showInfoWindow.classList.contains('hidden')) {
-        showInfoWindow.classList.add('hidden')
+        showInfoWindow.classList.add('hidden');
+        document.body.classList.remove('overflow');
+    
     }
 }
 

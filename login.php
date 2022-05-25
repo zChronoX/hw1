@@ -21,11 +21,9 @@
         if (mysqli_num_rows($res) > 0) {
             // Ritorna una sola riga, il che ci basta perché l'utente autenticato è solo uno
             $entry = mysqli_fetch_assoc($res);
-            if ($_POST['password'] === $entry['password']) //In alternativa: if (password_verify($_POST['password'], $entry['password']))
+            if (password_verify($_POST['password'], $entry['password'])) //Alternativa non funzionante a causa dell'hash:  if($_POST['password'] === $entry['password'])
              {
 
-                // (La gestione della sessione con i cookie è stata 
-                // eliminata, per non aggiungere confusione)
 
                 // Imposto una sessione dell'utente
                 $_SESSION["username"] = $entry['username'];

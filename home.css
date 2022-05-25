@@ -65,8 +65,9 @@ nav .l_nav a {
 
 nav .r_nav a:hover,
 nav .l_nav a:hover {
-    color: black;
-    background-color: lightpink;
+    background-color: lightcoral;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
 }
 
 nav h1 {
@@ -128,9 +129,7 @@ main {
     width: 100%;
 }
 
-.fixed {
-    padding: 20px;
-}
+
 
 .hidden {
     display: none;
@@ -235,6 +234,13 @@ input[type=text] {
     outline-color: silver;
     border-radius: 20px;
     margin: 0 0 10px 0;
+}
+input#track:hover,
+input#search_ps:hover{
+    background-color: lightcoral;
+    transform: scale(1.01);
+    transition: 150ms ease-in-out;
+    color:white;
 }
 
 
@@ -366,15 +372,12 @@ input[type=text] {
     .api {
         margin-left: 25px;
     }
-
     #infoView {
-        top: 130px;
-        left: 20px;
-        border: 1px solid white;
+        
+        
+        left:20px;
+        right:20px;
     }
 
-    #infoView div {
-        padding: 10px
-    }
-
+ 
 }

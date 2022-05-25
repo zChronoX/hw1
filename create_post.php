@@ -40,12 +40,13 @@
         </nav>
         <section id="infoView" class="hidden">
             <div>
+                <p id="closeInfo">X</p>
                 <p id="infoTitle">Info utili</p>
                 <p><strong>Autore:</strong> Giovanni Maria Contarino</p>
                 <p><strong>Matricola:</strong> 1000007029</p>
                 <p><strong>Anno Accademico:</strong> 2021/2022</p>
                 <p><strong>Università:</strong> Università degli Studi di Catania</p>
-                <p id="closeInfo">Chiudi</p>
+
             </div>
         </section>
     </header>
