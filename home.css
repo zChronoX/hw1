@@ -93,7 +93,7 @@ nav a {
     justify-content: center;
     align-items: flex-start;
     max-width: 1000px;
-    padding-right: 16px;
+    padding-right: 110px;
 
 }
 
@@ -235,12 +235,13 @@ input[type=text] {
     border-radius: 20px;
     margin: 0 0 10px 0;
 }
+
 input#track:hover,
-input#search_ps:hover{
+input#search_ps:hover {
     background-color: lightcoral;
     transform: scale(1.01);
     transition: 150ms ease-in-out;
-    color:white;
+    color: white;
 }
 
 
@@ -280,6 +281,7 @@ input#search_ps:hover{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    text-align: initial;
 }
 
 
@@ -340,9 +342,26 @@ input#search_ps:hover{
     margin-top: 20px;
 }
 
-#a2 a {
+
+
+.like {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    top: -25px;
+    margin-bottom: -30px;
+    text-decoration: none;
+    width: 10%;
+    left: 250px;
+
+}
+
+.unliked {
+    color: white;
+}
+
+.liked {
+    color: blue;
 }
 
 @media(max-width: 500px) {
@@ -372,12 +391,13 @@ input#search_ps:hover{
     .api {
         margin-left: 25px;
     }
+
     #infoView {
-        
-        
-        left:20px;
-        right:20px;
+
+
+        left: 20px;
+        right: 20px;
     }
 
- 
+
 }

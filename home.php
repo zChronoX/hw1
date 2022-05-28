@@ -35,7 +35,8 @@ $userinfo = mysqli_fetch_assoc($res_1);
         <nav>
             <div class="l_nav">
                 <a href="home.php">Home</a>
-                <a href="create_post.php">Nuovo post</a><br><br>
+                <a href="create_post.php">Nuovo post</a>
+                <a href="favorite.php">Preferiti</a><br><br>
             </div>
             <div class="middle_logo">
                 <img src="images/logo.png">

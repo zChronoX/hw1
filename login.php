@@ -19,7 +19,6 @@
         // Esecuzione
         $res = mysqli_query($conn, $query) or die(mysqli_error($conn));;
         if (mysqli_num_rows($res) > 0) {
-            // Ritorna una sola riga, il che ci basta perché l'utente autenticato è solo uno
             $entry = mysqli_fetch_assoc($res);
             if (password_verify($_POST['password'], $entry['password'])) //Alternativa non funzionante a causa dell'hash:  if($_POST['password'] === $entry['password'])
              {
@@ -106,16 +105,16 @@
 
             <div class="fblink">
                 <span class="fab fa-facebook"></span>
-                <a href="work_in_progress.php">Log in with Facebook</a>
+                <a href="#">Log in with Facebook</a>
             </div>
             <div class="glink">
                 <span class="fab fa-google"></span>
-                <a href="work_in_progress.php">Log in with Google</a>
+                <a href="#">Log in with Google</a>
             </div>
 
 
             <div class="forget-id">
-                <a href="work_in_progress.php">Password dimenticata</a>
+                <a href="#">Password dimenticata</a>
             </div>
 
             <div class='signup'>

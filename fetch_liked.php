@@ -4,33 +4,26 @@
         header("Location: login.php");
         exit;
     }
-
+    header('Content-Type: application/json');
 
     $conn = mysqli_connect($dbconfig['host'],$dbconfig['user'], $dbconfig['password'], $dbconfig['name']);
 
 
 $post = array();
-$query = "SELECT users.id AS usersid, users.nome AS nome, users.username AS username,
-users.cognome AS cognome, posts.titolo AS titolo, posts.testo AS testo, posts.time AS tempo,
-posts.id AS postsid, EXISTS(SELECT userid FROM likes WHERE postid = posts.id AND userid = $userid) as liked 
-FROM posts JOIN users on posts.userid = users.id ORDER BY postsid DESC";
+
+
+$query="SELECT u.nome AS nome, u.cognome AS cognome, u.username AS username, u.id AS usersid, p.titolo as titolo, p.testo as testo,
+ p.time as tempo, p.id AS postsid, EXISTS(SELECT userid FROM likes WHERE postid = p.id AND userid = $userid) as liked
+FROM posts p join likes l on p.id=l.postid join users u on p.userid=u.id where l.userid='$userid'";
 $res = mysqli_query($conn, $query) or die(mysqli_error($conn));
-
 while($row = mysqli_fetch_assoc($res)){
-
-$time=getTime($row['tempo']);
-
-
+    $time=getTime($row['tempo']);
     $post[] = array('userid' => $row['usersid'], 'nome' => $row['nome'], 'cognome' => $row['cognome'], 'username' =>$row['username'],
     'titolo' => $row['titolo'], 'testo' => $row['testo'], 'tempo' => "$time", 'posts_id' => $row['postsid'], 'liked' =>$row['liked']);
-} 
-
+}
 
 echo json_encode($post);
 exit;
-
-
-
 function getTime($timestamp) {      
     // Calcola il tempo trascorso dalla pubblicazione del post       
     $old = strtotime($timestamp); 

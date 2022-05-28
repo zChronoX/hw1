@@ -12,10 +12,10 @@
     $post = array();
     $post_name=mysqli_real_escape_string($conn, $_GET['search_post']);
 
-
+//Query che mi restituisce tutte le info del post (contenuto e chi l'ha pubblicato), inserendo un carattere/parola contenuta nel testo
     $query = "SELECT users.id AS usersid, users.nome AS nome, users.username AS username,
     users.cognome AS cognome, posts.titolo AS titolo, posts.testo AS testo, posts.time AS tempo,
-    posts.id AS postsid
+    posts.id AS postsid, EXISTS(SELECT userid FROM likes WHERE postid = posts.id AND userid = $userid) as liked
     FROM posts JOIN users on posts.userid = users.id WHERE testo like '%".$post_name."%' ORDER BY postsid DESC ";
 
 
@@ -27,7 +27,7 @@ $time=getTime($row['tempo']);
 
 
     $post[] = array('userid' => $row['usersid'], 'nome' => $row['nome'], 'cognome' => $row['cognome'], 'username' =>$row['username'],
-    'titolo' => $row['titolo'], 'testo' => $row['testo'], 'tempo' => "$time", 'posts_id' => $row['postsid']);
+    'titolo' => $row['titolo'], 'testo' => $row['testo'], 'tempo' => "$time", 'posts_id' => $row['postsid'], 'liked' =>$row['liked']);
 } 
 
 

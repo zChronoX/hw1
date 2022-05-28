@@ -1,6 +1,6 @@
 //TOGGLE PASSWORD
 function showPassword(event) {
-  console.log(event)
+  console.log(event);
   if (state) {
     let type = document.getElementById('password');
     type.setAttribute("type", "password");
@@ -36,8 +36,8 @@ function verifica(event) {
 const form_dati = document.forms['form_dati'];
 form_dati.addEventListener('submit', verifica);
 
-const username = document.querySelector('input[name="username"]')
-username.addEventListener('blur', checkUsername)
+const username = document.querySelector('input[name="username"]');
+username.addEventListener('blur', checkUsername);
 
 function checkUsername(event) {
   const form = document.getElementById("textUser");
@@ -68,8 +68,8 @@ function checkUsername(event) {
 
 }
 
-const password = document.querySelector('input[name="password"]')
-password.addEventListener('blur', checkPassword)
+const password = document.querySelector('input[name="password"]');
+password.addEventListener('blur', checkPassword);
 
 function checkPassword(event) {
   const form = document.getElementById("textPassword");

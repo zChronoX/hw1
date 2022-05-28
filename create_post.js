@@ -1,8 +1,8 @@
-const showInfoWindow = document.querySelector('#infoView')
-const infoButton = document.querySelector('#infoButton')
-infoButton.addEventListener('click', showInfo)
-const closeInfo = document.querySelector('#closeInfo')
-closeInfo.addEventListener('click', closeInfoPage)
+const showInfoWindow = document.querySelector('#infoView');
+const infoButton = document.querySelector('#infoButton');
+infoButton.addEventListener('click', showInfo);
+const closeInfo = document.querySelector('#closeInfo');
+closeInfo.addEventListener('click', closeInfoPage);
 
 
 //Funzione di visualizzazione delle info
@@ -19,7 +19,7 @@ function closeInfoPage() {
     if (!showInfoWindow.classList.contains('hidden')) {
         showInfoWindow.classList.add('hidden');
         document.body.classList.remove('overflow');
-    
+
     }
 }
 
@@ -60,8 +60,8 @@ function onError(error) {
 form_dati.addEventListener('submit', createNewPost);
 
 
-const title = document.querySelector('input[name="Titolo"]')
-title.addEventListener('blur', checkTitle)
+const title = document.querySelector('input[name="Titolo"]');
+title.addEventListener('blur', checkTitle);
 
 function checkTitle(event) {
     const form_title = document.getElementById("Title");
@@ -90,13 +90,13 @@ function checkTitle(event) {
     }
 }
 
-const text = document.querySelector('#testo')
-text.addEventListener('blur', checkText)
+const text = document.querySelector('#testo');
+text.addEventListener('blur', checkText);
 
 function checkText(event) {
     const form_text = document.getElementById("main_text");
     let text_value = document.getElementById("testo").value;
-    const pattern = /^[a-zA-Z0-9!@#?\$%\^\&*\s)\(+=._-]{10,}$/g;
+    const pattern = /^[a-zA-Z0-9!@#?,èòàùé\$%\^\&*\s)\(+=._-]{10,}$/g;
 
     if (text_value.match(pattern)) {
         console.log("Testo valido");

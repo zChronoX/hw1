@@ -1,16 +1,15 @@
-<?php 
-    require_once 'authentication.php';
-    if (!$userid = checkAuth()) {
-        header("Location: login.php");
-        exit;
-    }
-
-
-
-
+<?php
+require_once 'authentication.php';
+if (!$userid = checkAuth()) {
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <html>
+
+
+
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,8 +17,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="create_post.css">
-    <script src="create_post.js" defer="true"></script>
+    <link rel="stylesheet" href="favorite.css">
+    <script src="favorite.js" defer="true"></script>
 </head>
 
 <body>
@@ -51,21 +50,9 @@
             </div>
         </section>
     </header>
-    <section id="newpost">
-        <form class='type_zero' name='form_post' method="POST">
-
-            <h1>Scrivi qui un nuovo post!</h1>
-            <label><input type='text' name='Titolo' class="TitleBox" placeholder="Titolo" id="titolo"></label>
-            <span id="Title"></span>
-            <label><textarea name='Testo' class="textBox" placeholder="Inserisci qui il testo"
-                    id="testo"></textarea></label>
-            <span id="main_text"></span>
-            <div id="zero"><input type='submit' value='Invia'></div>
-
+    <section id="posts">
+        <p id="posts_title"> Qui puoi trovare tutti i post a cui ai messo il Like!
+        </p>
     </section>
-    </form>
-
-
 </body>
-
 </html>
